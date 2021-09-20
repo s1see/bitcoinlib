@@ -4163,7 +4163,7 @@ class Wallet(object):
             print("%-20s %-20s %20s" % (na_balance['network'], "(Account %s)" % na_balance['account_id'],
                                         Value.from_satoshi(na_balance['balance'], network=na_balance['network']).
                                         str_unit(currency_repr='symbol')))
-        print("\n")
+            return Value.from_satoshi(na_balance['balance'], network=na_balance['network']).str_unit(currency_repr='symbol')
 
     def as_dict(self, include_private=False):
         """
